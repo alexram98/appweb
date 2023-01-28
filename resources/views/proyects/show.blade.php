@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('title', 'Proyect Details')
 @section('heading', 'Proyect Details')
 @section('link_text', 'Proyectos')
@@ -15,9 +15,7 @@
 <p class="btn btn-dark rounded-pill">{{ $proyect->categories->nombre
 
 }}</p>
-<p class="lead">{{ \Carbon\Carbon::parse($proyect->created_at)-
-
->diffForHumans() }}</p>
+<p class="lead">{{ \Carbon\Carbon::parse($proyect->created_at)->diffForHumans() }}</p>
 </div>
 <hr>
 <h3 class="fw-bold text-primary">{{ $proyect->title }}</h3>
